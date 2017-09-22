@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RH_pictureView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="78g-kV-K76">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="RAq-CP-9Mh">
+                    <rect key="frame" x="10" y="20" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="74X-XA-x9X"/>
+                        <constraint firstAttribute="width" constant="50" id="UTB-z3-SPx"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV9-Jw-LSe">
+                    <rect key="frame" x="0.0" y="632" width="375" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Wg2-BN-xfU"/>
+                    </constraints>
+                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDK-Z2-2wi" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="137" y="284" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="5eU-0J-icA"/>
+                        <constraint firstAttribute="width" constant="100" id="ZxS-BD-fd5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aV9-Jw-LSe" secondAttribute="bottom" constant="5" id="4Ct-q7-CZs"/>
+                <constraint firstItem="aV9-Jw-LSe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5hG-xz-5wE"/>
+                <constraint firstAttribute="bottom" secondItem="78g-kV-K76" secondAttribute="bottom" id="8OE-FW-gZb"/>
+                <constraint firstAttribute="trailing" secondItem="aV9-Jw-LSe" secondAttribute="trailing" id="8mx-wD-nmM"/>
+                <constraint firstItem="kDK-Z2-2wi" firstAttribute="centerY" secondItem="78g-kV-K76" secondAttribute="centerY" id="Dbg-SS-m5n"/>
+                <constraint firstItem="78g-kV-K76" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cwM-9X-ewL"/>
+                <constraint firstItem="kDK-Z2-2wi" firstAttribute="centerX" secondItem="78g-kV-K76" secondAttribute="centerX" id="d65-y3-6Tc"/>
+                <constraint firstItem="78g-kV-K76" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="msR-8T-d1u"/>
+                <constraint firstAttribute="trailing" secondItem="78g-kV-K76" secondAttribute="trailing" id="o6R-u3-tWS"/>
+                <constraint firstItem="RAq-CP-9Mh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="yIZ-kO-N6M"/>
+                <constraint firstItem="RAq-CP-9Mh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zc3-bb-Z85"/>
+            </constraints>
+            <connections>
+                <outlet property="gifView" destination="RAq-CP-9Mh" id="8ui-S5-5gE"/>
+                <outlet property="imageView" destination="78g-kV-K76" id="dFD-S3-d6Z"/>
+                <outlet property="progressview" destination="kDK-Z2-2wi" id="nha-QI-Fi8"/>
+                <outlet property="seeBigButton" destination="aV9-Jw-LSe" id="auJ-Ys-2WX"/>
+            </connections>
+            <point key="canvasLocation" x="37" y="-33"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>
